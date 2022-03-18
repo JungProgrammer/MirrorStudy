@@ -9,6 +9,10 @@ public class Unit : NetworkBehaviour
 {
     [SerializeField] 
     private UnitMovement _unitMovement;
+
+
+    [SerializeField] 
+    private Targeter _targeter;
     
     
     [SerializeField] 
@@ -28,6 +32,10 @@ public class Unit : NetworkBehaviour
 
     public UnitMovement GetUnitMovement()
         => _unitMovement;
+
+
+    public Targeter GetTargeter()
+        => _targeter;
 
 
     #region Server
