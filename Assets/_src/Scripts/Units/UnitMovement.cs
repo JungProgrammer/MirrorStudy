@@ -14,9 +14,31 @@ public class UnitMovement : NetworkBehaviour
     private Targeter _targeter;
 
 
+    [SerializeField] 
+    private float _chaseRange = 10f;
+
+
+    #region Server
+    
+    
     [ServerCallback]
     private void Update()
     {
+        Targetable target = _targeter.GetTarget();
+        
+        if (target != null)
+        {
+            if ((target.transform.position - transform.position).sqrMagnitude > _chaseRange * _chaseRange)
+            {
+                _meshAgent.SetDestination(target.transform.position);
+            }
+            else if (_meshAgent.hasPath)
+            {
+                _meshAgent.ResetPath();
+            }
+        }
+        
+        
         if (!_meshAgent.hasPath)
             return;
         if (_meshAgent.remainingDistance > _meshAgent.stoppingDistance)
@@ -25,9 +47,7 @@ public class UnitMovement : NetworkBehaviour
         
         _meshAgent.ResetPath();
     }
-
-
-    #region Server
+    
 
     [Command]
     public void CmdMove(Vector3 position)
