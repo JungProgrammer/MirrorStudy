@@ -65,4 +65,5 @@ MonoBehaviour:
   syncInterval: 0.1
   _buildings:
   - {fileID: 2481517819147264724, guid: bcf1dc811cf824840aada8bfb5c9c299, type: 3}
+  - {fileID: 2481517819147264724, guid: 805a383d189518245a4c03f432fee856, type: 3}
   _playerUnits: []
