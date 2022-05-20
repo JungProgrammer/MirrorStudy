@@ -80,7 +80,7 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         {
             // place building
             
-            
+            _rtsPlayer.CmdTryPlaceBuilding(_building.GetId(), hit.point);
         }
         
         Destroy(_buildingPreviewInstance);
