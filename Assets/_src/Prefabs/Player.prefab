@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  _cameraTransform: {fileID: 5442406021246073623}
   _buildingBlockLayer:
     serializedVersion: 2
     m_Bits: 321
