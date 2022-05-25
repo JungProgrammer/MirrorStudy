@@ -1,27 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &8613565498733517695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2481517819147264719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b122996d651e72344b9b70847fd37839, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  _health: {fileID: 2481517819147264725}
-  _unitPrefab: {fileID: 6141672692353852480, guid: 69283df79f700ac40bc69d447f124d45, type: 3}
-  _unitSpawnPoint: {fileID: 792004684484778776}
-  _remainingUnitsText: {fileID: 6748755967102636463}
-  _unitProgressImage: {fileID: 5815213038990479937}
-  _maxUnitQueue: 5
-  _spawnMoveRange: 7
-  _unitSpawnDuration: 5
 --- !u!1 &2589427959695248269
 GameObject:
   m_ObjectHideFlags: 0
@@ -52,6 +30,28 @@ Transform:
   m_Father: {fileID: 2481517819147264723}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8613565498733517695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2481517819147264719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b122996d651e72344b9b70847fd37839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  _health: {fileID: 2481517819147264725}
+  _unitPrefab: {fileID: 6141672692353852480, guid: 69283df79f700ac40bc69d447f124d45, type: 3}
+  _unitSpawnPoint: {fileID: 792004684484778776}
+  _remainingUnitsText: {fileID: 6748755967102636463}
+  _unitProgressImage: {fileID: 5815213038990479937}
+  _maxUnitQueue: 5
+  _spawnMoveRange: 7
+  _unitSpawnDuration: 5
 --- !u!114 &1164603388325674816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +124,11 @@ PrefabInstance:
 --- !u!4 &3072794262971662305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 252321163093160328, guid: a82bfab7d23a89748b312704379f4682, type: 3}
+  m_PrefabInstance: {fileID: 2964686701197495913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6626662903310494181 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8273688753275873164, guid: a82bfab7d23a89748b312704379f4682, type: 3}
   m_PrefabInstance: {fileID: 2964686701197495913}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3868652230745806687
@@ -229,6 +234,14 @@ PrefabInstance:
       propertyPath: _aimAtPoint
       value: 
       objectReference: {fileID: 3072794262971662305}
+    - target: {fileID: 8061973832493709981, guid: 658b79ea70d6dd04b8ff24a4a6d95f57, type: 3}
+      propertyPath: _colorRenderers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061973832493709981, guid: 658b79ea70d6dd04b8ff24a4a6d95f57, type: 3}
+      propertyPath: _colorRenderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 6626662903310494181}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 658b79ea70d6dd04b8ff24a4a6d95f57, type: 3}
 --- !u!1 &2481517819147264719 stripped

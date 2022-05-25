@@ -120,6 +120,14 @@ PrefabInstance:
       propertyPath: _aimAtPoint
       value: 
       objectReference: {fileID: 3072794262971662305}
+    - target: {fileID: 8061973832493709981, guid: 658b79ea70d6dd04b8ff24a4a6d95f57, type: 3}
+      propertyPath: _colorRenderers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061973832493709981, guid: 658b79ea70d6dd04b8ff24a4a6d95f57, type: 3}
+      propertyPath: _colorRenderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 6626662903310494181}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 658b79ea70d6dd04b8ff24a4a6d95f57, type: 3}
 --- !u!1 &2481517819147264719 stripped
@@ -208,5 +216,10 @@ GameObject:
 --- !u!4 &3072794262971662305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8272287618966797838, guid: a0b7f678fac057148947fb177e83dc78, type: 3}
+  m_PrefabInstance: {fileID: 6370856075782521327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6626662903310494181 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 261051641879111690, guid: a0b7f678fac057148947fb177e83dc78, type: 3}
   m_PrefabInstance: {fileID: 6370856075782521327}
   m_PrefabAsset: {fileID: 0}

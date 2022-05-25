@@ -195,6 +195,14 @@ PrefabInstance:
       propertyPath: _aimAtPoint
       value: 
       objectReference: {fileID: 3072794262971662305}
+    - target: {fileID: 8061973832493709981, guid: 658b79ea70d6dd04b8ff24a4a6d95f57, type: 3}
+      propertyPath: _colorRenderers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061973832493709981, guid: 658b79ea70d6dd04b8ff24a4a6d95f57, type: 3}
+      propertyPath: _colorRenderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 6626662903310494181}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 658b79ea70d6dd04b8ff24a4a6d95f57, type: 3}
 --- !u!1 &2481517819147264719 stripped
