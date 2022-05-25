@@ -27,6 +27,7 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
 
     private Camera _mainCamera;
+    private BoxCollider _buildingCollider;
     private RTSPlayer _rtsPlayer;
     private GameObject _buildingPreviewInstance;
     private Renderer _buildingRendererInstance;
@@ -38,6 +39,8 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
         _iconImage.sprite = _building.GetIcon();
         _priceText.text = _building.GetPrice().ToString();
+
+        _buildingCollider = _building.GetComponent<BoxCollider>();
     }
 
 
@@ -59,6 +62,8 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     public void OnPointerDown(PointerEventData eventData)
     {
         if (eventData.button != PointerEventData.InputButton.Left)
+            return;
+        if (_rtsPlayer.GetResources() < _building.GetPrice())
             return;
 
 
@@ -101,5 +106,9 @@ public class BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         {
             _buildingPreviewInstance.SetActive(true);
         }
+
+        Color color = _rtsPlayer.CanPlaceBuilding(_buildingCollider, hit.point) ? Color.green : Color.red;
+        
+        _buildingRendererInstance.material.SetColor("_BaseColor", color);
     }
 }
