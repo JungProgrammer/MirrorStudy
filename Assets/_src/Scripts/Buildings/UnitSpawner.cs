@@ -99,9 +99,6 @@ public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
         Vector3 spawnOffset = Random.insideUnitSphere * _spawnMoveRange;
         spawnOffset.y = _unitSpawnPoint.position.y;
         
-        Debug.DrawRay(_unitSpawnPoint.position + spawnOffset, Vector3.up * 5, Color.green);
-        Debug.Log(_unitSpawnPoint.position + spawnOffset);
-
         UnitMovement unitMovement = unitInstance.GetUnitMovement();
         unitMovement.ServerMove(_unitSpawnPoint.position + spawnOffset);
 
