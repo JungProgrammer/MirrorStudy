@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LobbyMenu : MonoBehaviour
 {
@@ -11,21 +12,39 @@ public class LobbyMenu : MonoBehaviour
     private GameObject _lobbyUI;
 
 
+    [SerializeField] 
+    private Button _startGameButton;
+
+
     private void Start()
     {
         RTSNetworkManager.ClientOnConnected += HandleClientConnected;
+        RTSPlayer.AuthorityOnPartyOwnerStateUpdated += AuthorityHandlePartyOwnerStateUpdated;
     }
 
 
     private void OnDestroy()
     {
         RTSNetworkManager.ClientOnConnected -= HandleClientConnected;
+        RTSPlayer.AuthorityOnPartyOwnerStateUpdated -= AuthorityHandlePartyOwnerStateUpdated;
     }
 
 
     private void HandleClientConnected()
     {
         _lobbyUI.SetActive(true);
+    }
+
+
+    private void AuthorityHandlePartyOwnerStateUpdated(bool state)
+    {
+        _startGameButton.gameObject.SetActive(state);
+    }
+
+
+    public void StartGame()
+    {
+        NetworkClient.connection.identity.GetComponent<RTSPlayer>().CmdStartGame();
     }
 
 

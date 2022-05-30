@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -681,6 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lobbyUI: {fileID: 238902776}
+  _startGameButton: {fileID: 876909795}
 --- !u!1 &330127686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,7 +1469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &876909794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1532,7 +1533,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 876909796}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 325286681}
+        m_TargetAssemblyTypeName: LobbyMenu, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &876909796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2559,10 +2572,6 @@ PrefabInstance:
     - target: {fileID: 6782834108882072436, guid: 4fea65049348f13428a4c8eee0665ef0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6782834108882072439, guid: 4fea65049348f13428a4c8eee0665ef0, type: 3}
-      propertyPath: onlineScene
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fea65049348f13428a4c8eee0665ef0, type: 3}
