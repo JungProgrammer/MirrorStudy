@@ -2578,6 +2578,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6782834108882072439, guid: 4fea65049348f13428a4c8eee0665ef0, type: 3}
+      propertyPath: maxConnections
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fea65049348f13428a4c8eee0665ef0, type: 3}
 --- !u!1 &1552266669
@@ -3138,6 +3142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _landingPagePanel: {fileID: 1634122222}
+  _isUseSteam: 1
 --- !u!1 &1722980415
 GameObject:
   m_ObjectHideFlags: 0
