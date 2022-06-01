@@ -75,6 +75,8 @@ public class RTSNetworkManager : NetworkManager
         
         Players.Add(player);
         
+        player.SetDisplayName($"Player {Players.Count}");
+        
         player.SetTeamColor(new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1));
         
         player.SetPartyOwner(Players.Count == 1);
